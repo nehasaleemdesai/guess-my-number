@@ -20,10 +20,10 @@ btnCheck.addEventListener('click', e => {
 
   // if no input value given to check
   if (!guess) {
-    message.textContent = 'Enter a Number!';
+    message.textContent = '🧐Enter a Number!';
   } else if (guess === secretNumber) {
     // if the guessed number is equal to secret number
-    message.textContent = 'Correct Number!';
+    message.textContent = '🎉Correct Number!';
     number.textContent = secretNumber;
     document.body.style.backgroundColor = 'green';
     number.style.width = '30rem';
@@ -36,11 +36,11 @@ btnCheck.addEventListener('click', e => {
   } else if (guess !== secretNumber) {
     // if the guessed number is not equal
     if (score > 1) {
-      message.textContent = guess > secretNumber ? 'Too high!' : 'Too low!';
+      message.textContent = guess > secretNumber ? '📈Too high!' : '📉Too low!';
       score--;
       setScore.textContent = score;
     } else {
-      message.textContent = 'You lost the game!';
+      message.textContent = '😞You lost the game!';
       document.body.style.backgroundColor = 'red';
       setScore.textContent = 0;
     }
