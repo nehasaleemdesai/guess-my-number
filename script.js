@@ -20,7 +20,7 @@ btnCheck.addEventListener('click', e => {
 
   // if no input value given to check
   if (!guess) {
-    message.textContent = '🧐Enter a Number!';
+    message.textContent = '🧐 Enter a Number!';
   } else if (guess === secretNumber) {
     // if the guessed number is equal to secret number
     message.textContent = '🎉Correct Number!';
@@ -36,11 +36,12 @@ btnCheck.addEventListener('click', e => {
   } else if (guess !== secretNumber) {
     // if the guessed number is not equal
     if (score > 1) {
-      message.textContent = guess > secretNumber ? '📈Too high!' : '📉Too low!';
+      message.textContent =
+        guess > secretNumber ? '📈 Too high!' : '📉 Too low!';
       score--;
       setScore.textContent = score;
     } else {
-      message.textContent = '😞You lost the game!';
+      message.textContent = '😞 You lost the game!';
       document.body.style.backgroundColor = 'red';
       setScore.textContent = 0;
     }
@@ -51,7 +52,7 @@ const btnAgain = document.querySelector('.again');
 btnAgain.addEventListener('click', e => {
   score = 20;
   secretNumber = Math.floor(Math.random() * 20 + 1);
-  message.textContent = 'Start guessing...';
+  message.textContent = '🎯 Start guessing...';
   number.textContent = '?';
   setScore.textContent = score;
   document.querySelector('.guess').value = '';
