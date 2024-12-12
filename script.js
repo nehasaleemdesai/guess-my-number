@@ -23,7 +23,7 @@ btnCheck.addEventListener('click', e => {
     message.textContent = '🧐 Enter a Number!';
   } else if (guess === secretNumber) {
     // if the guessed number is equal to secret number
-    message.textContent = '🎉Correct Number!';
+    message.textContent = '🎉 Correct Number!';
     number.textContent = secretNumber;
     document.body.style.backgroundColor = 'green';
     number.style.width = '30rem';
